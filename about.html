@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Riya</title>
+    <title>About Me - Riya</title>
     <style>
         body {
             margin: 0;
@@ -43,15 +43,25 @@
         }
         main {
             flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .about-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in;
         }
         h1 {
-            font-size: 3rem;
             color: #1a73e8;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-in;
+            margin-bottom: 1.5rem;
+        }
+        p {
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 1rem;
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
@@ -62,13 +72,18 @@
 <body>
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Me</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
         </ul>
     </nav>
     <main>
-        <h1>Hello Riya</h1>
+        <div class="about-content">
+            <h1>About Me</h1>
+            <p>Hello! I'm Riya, a passionate developer with a love for creating beautiful and functional web experiences. I specialize in modern web technologies and enjoy turning complex problems into simple, elegant solutions.</p>
+            <p>With a strong foundation in web development and a keen eye for design, I strive to build applications that not only work flawlessly but also provide an exceptional user experience.</p>
+            <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge with the developer community.</p>
+        </div>
     </main>
 </body>
 </html>

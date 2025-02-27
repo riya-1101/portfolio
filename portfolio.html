@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Riya</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+        }
+        nav {
+            background-color: #ffffff;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: #1a73e8;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #e8f0fe;
+        }
+        nav a.active {
+            background-color: #1a73e8;
+            color: white;
+        }
+        main {
+            flex: 1;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-in;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            animation: fadeIn 1s ease-in;
+        }
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background-color: #e8f0fe;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a73e8;
+            font-size: 1.2rem;
+        }
+        .project-info {
+            padding: 1.5rem;
+        }
+        .project-info h2 {
+            color: #1a73e8;
+            margin: 0 0 0.5rem 0;
+        }
+        .project-info p {
+            color: #333;
+            margin: 0;
+            line-height: 1.6;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>My Portfolio</h1>
+        <div class="portfolio-grid">
+            <div class="project-card">
+                <div class="project-image">Project 1 Image</div>
+                <div class="project-info">
+                    <h2>Project One</h2>
+                    <p>A brief description of the first project showcasing the key features and technologies used.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">Project 2 Image</div>
+                <div class="project-info">
+                    <h2>Project Two</h2>
+                    <p>Description of the second project highlighting the main achievements and technical challenges overcome.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">Project 3 Image</div>
+                <div class="project-info">
+                    <h2>Project Three</h2>
+                    <p>Overview of the third project emphasizing the problem solved and the solution implemented.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
