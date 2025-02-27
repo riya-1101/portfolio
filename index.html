@@ -43,15 +43,59 @@
         }
         main {
             flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         h1 {
             font-size: 3rem;
             color: #1a73e8;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 2rem;
             animation: fadeIn 1s ease-in;
+        }
+        .pet-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            animation: fadeIn 1s ease-in;
+        }
+        .pet-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .pet-card:hover {
+            transform: translateY(-5px);
+        }
+        .pet-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .pet-info {
+            padding: 1.5rem;
+        }
+        .pet-info h2 {
+            color: #1a73e8;
+            margin: 0 0 0.5rem 0;
+        }
+        .pet-info p {
+            color: #333;
+            margin: 0;
+            line-height: 1.6;
+        }
+        @media (max-width: 900px) {
+            .pet-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .pet-grid {
+                grid-template-columns: 1fr;
+            }
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
@@ -68,7 +112,30 @@
         </ul>
     </nav>
     <main>
-        <h1>Hello Riya</h1>
+        <h1>Welcome to My World</h1>
+        <div class="pet-grid">
+            <div class="pet-card">
+                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cat" class="pet-image">
+                <div class="pet-info">
+                    <h2>Graceful Cats</h2>
+                    <p>Cats are elegant, independent companions known for their playful nature and soothing purrs. They make perfect pets for those who appreciate a balance of affection and autonomy.</p>
+                </div>
+            </div>
+            <div class="pet-card">
+                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Dog" class="pet-image">
+                <div class="pet-info">
+                    <h2>Loyal Dogs</h2>
+                    <p>Dogs are faithful friends who bring endless joy and unconditional love. Their enthusiastic greetings and unwavering loyalty make them incredible lifelong companions.</p>
+                </div>
+            </div>
+            <div class="pet-card">
+                <img src="https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Bird" class="pet-image">
+                <div class="pet-info">
+                    <h2>Cheerful Birds</h2>
+                    <p>Birds are delightful pets that fill your home with melodious songs and vibrant energy. Their intelligence and ability to interact make them fascinating companions.</p>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>
